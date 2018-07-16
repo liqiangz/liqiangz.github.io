@@ -37,6 +37,5 @@ timezone: Asia/Hangzhou
 baseurl: ""
 feed: true
 
-# Social links
-linkedin: openpy
-github: nix1947
+
+github: liqiangz
