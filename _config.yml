@@ -29,11 +29,11 @@ markdown: kramdown
 # theme: jekyll-hilmi
 
 # Theme setting
-author: Manoj Gautam
-nick:   Manoj
-profession: "Software Engineer"
-tagline: "I develop web apps with django and javascript"
-timezone: Asia/Kathmandu
+author: liqiangz
+nick:   Manliqiangz
+profession:
+tagline:
+timezone: Asia/Hangzhou
 baseurl: ""
 feed: true
 
