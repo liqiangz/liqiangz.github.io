@@ -6,7 +6,7 @@
 之前一直使用的都是springboot框架，习惯了spring的容器，于是就想着把netty也放到容器中以便于方便使用。
 这次先用个demo先实现下，以后有更好的方式的时候再来更新。
 首先是 pom.xml 文件
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -67,7 +67,7 @@
 ```
 然后是 启动main方法
 在这里实现了CommandLineRunner接口，并重写了run方法，以便在springboot启动后就立即启动netty服务。
-```
+```java
 package io.liqiangz.server;
 
 import org.springframework.boot.CommandLineRunner;
@@ -94,7 +94,7 @@ public class NettyApplication implements CommandLineRunner {
 
 ```
 接下来就是netty服务启动引导类,很简单的一个echo服务
-```
+```java
 package io.liqiangz.server;
 
 import io.netty.bootstrap.ServerBootstrap;
@@ -145,7 +145,7 @@ public class EchoServer {
 }
 ```
 serverHandler类
-```
+```java
 package io.liqiangz.server;
 
 import io.netty.buffer.ByteBuf;
