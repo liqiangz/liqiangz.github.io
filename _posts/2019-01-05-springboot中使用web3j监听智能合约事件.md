@@ -1,4 +1,3 @@
-
 智能合约执行后有时需要在后台监听相应的事件。本文将介绍下如何在springboot中使用web3j库监听智能合约的事件
 ### 导入web3j的包
 在 pom.xml 文件中添加如下依赖
@@ -10,7 +9,9 @@
 </dependency>
 ```   
 ### 将web3j对象放入spring容器中管理
-新建 `ContractConfig.java` 文件，代码注释比较详细，就不再详细介绍
+
+新建 `ContractConfig.java` 文件，代码注释比较详细，参考注释
+注意不能是单例模式，还有合约地址的格式也要注意。
 ```java
 package io.liqiangz.config;
 
@@ -88,7 +89,9 @@ public class ContractConfig {
 }
 ```
 
-### 在spring启动时启动监听，监听数据，详情看注释
+### 在spring启动时启动监听
+
+启动监听，注意监听一个就要注入一个监听器，不能共用一个监听器。
 
 ```java
 /**
